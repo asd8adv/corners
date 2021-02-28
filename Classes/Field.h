@@ -35,7 +35,7 @@ public:
         _num = id;
     }
 
-    uint8_t getFieldId() {
+    uint8_t getFieldId() const {
         return _num;
     }
 
@@ -44,7 +44,7 @@ public:
         changeTypeOrSelected();
     }
 
-    Type getType() {
+    Type getType() const {
         return _fieldType;
     }
 
@@ -60,7 +60,7 @@ public:
     void changeTypeOrSelected();
 
 
-    bool getSelected() {
+    bool getSelected() const {
         return _isSelected;
     }
 

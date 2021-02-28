@@ -28,7 +28,7 @@ public:
 	void checkWins(Field::Type type);
 	
 
-	Field::Type getPlayerType() {
+	Field::Type getPlayerType() const {
 		return Field::Type::WHITE;
 	}
 

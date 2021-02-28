@@ -69,7 +69,7 @@ void AIPlayer::play(bool anyway) {
 }
 
 
-int8_t AIPlayer::targetÑollision(uint8_t id) {
+int8_t AIPlayer::targetÑollision(uint8_t id)  const {
 	TargetZone neutral1{ 59,51,43,35,27,28,29,30,31 };
 	TargetZone neutral2{ 60,39 };
 	TargetZone neutral4{ 36,28,29 };
@@ -124,7 +124,7 @@ int8_t AIPlayer::targetÑollision(uint8_t id) {
 class AIChecker
 ***************/
 
-bool AIChecker::isfieldAvialable(uint8_t id) {
+bool AIChecker::isfieldAvialable(uint8_t id) const {
 	Field* field = _gm->getFieldWithNum(id);
 	CCASSERT(field != nullptr, "field is nullptr");
 	bool Uniq = (field->getFieldId() != _body->getFieldId());

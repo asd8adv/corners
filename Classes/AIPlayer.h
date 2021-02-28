@@ -101,7 +101,7 @@ struct AIChecker {
 	AIChecker(Field* b, GameMaster* gm) :_body(b), _gm(gm)
 	{}
 
-	bool isfieldAvialable(uint8_t id);
+	bool isfieldAvialable(uint8_t id) const;
 
 	static Vec2 getMoveForDirection(Direction dr) {
 		switch (dr) {
@@ -149,13 +149,13 @@ class AIPlayer {
 public:
 	AIPlayer(GameMaster* gm);
 
-	int8_t target—ollision(uint8_t id);
+	int8_t target—ollision(uint8_t id) const;
 
-	std::shared_ptr<AITarget> getTarget() {
+	std::shared_ptr<AITarget> getTarget() const {
 		return std::shared_ptr<AITarget>(_target);
 	}
 
-	std::shared_ptr<AIBased> getBase() {
+	std::shared_ptr<AIBased> getBase() const {
 		return std::shared_ptr<AIBased>(_base);
 	}
 
